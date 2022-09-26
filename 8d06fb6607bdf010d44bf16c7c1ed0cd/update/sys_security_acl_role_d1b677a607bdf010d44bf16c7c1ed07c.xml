@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>zdravko.verguilov</sys_created_by>
+        <sys_created_on>2021-08-09 11:44:29</sys_created_on>
+        <sys_id>d1b677a607bdf010d44bf16c7c1ed07c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_463716_cah_card.x_463716_cah.card_user</sys_name>
+        <sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope>
+        <sys_security_acl display_value="x_463716_cah_card">d1b677a607bdf010d44bf16c7c1ed079</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_d1b677a607bdf010d44bf16c7c1ed07c</sys_update_name>
+        <sys_updated_by>zdravko.verguilov</sys_updated_by>
+        <sys_updated_on>2021-08-09 11:44:29</sys_updated_on>
+        <sys_user_role display_value="x_463716_cah.card_user" name="x_463716_cah.card_user">b0b6ff6607bdf010d44bf16c7c1ed061</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

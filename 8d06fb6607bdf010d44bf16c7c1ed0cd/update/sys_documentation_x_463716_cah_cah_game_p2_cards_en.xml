@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="p2_cards" label="P2 Cards" language="en" table="x_463716_cah_cah_game">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>p2_cards</element>
+            <help/>
+            <hint/>
+            <label>P2 Cards</label>
+            <language>en</language>
+            <name>x_463716_cah_cah_game</name>
+            <plural>P2 Cards</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-04-23 13:30:31</sys_created_on>
+            <sys_id>d49feb1d07830110d44bf16c7c1ed069</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>P2 Cards</sys_name>
+            <sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope>
+            <sys_update_name>sys_documentation_x_463716_cah_cah_game_p2_cards_en</sys_update_name>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:30:31</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access">
+    <sys_restricted_caller_access action="INSERT_OR_UPDATE">
+        <operation>read</operation>
+        <source>86e9824a07b1b010d44bf16c7c1ed09a</source>
+        <source_scope display_value="VGR">ae40dcf507717010d44bf16c7c1ed04e</source_scope>
+        <source_table>sp_widget</source_table>
+        <source_type>6</source_type>
+        <status>2</status>
+        <sys_class_name>sys_restricted_caller_access</sys_class_name>
+        <sys_created_by>zdravko.verguilov</sys_created_by>
+        <sys_created_on>2022-05-31 21:43:01</sys_created_on>
+        <sys_id>49bcc1710773c510d44bf16c7c1ed0d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ae40dcf507717010d44bf16c7c1ed04e</sys_name>
+        <sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope>
+        <sys_update_name>sys_restricted_caller_access_49bcc1710773c510d44bf16c7c1ed0d6</sys_update_name>
+        <sys_updated_by>zdravko.verguilov</sys_updated_by>
+        <sys_updated_on>2022-05-31 21:43:01</sys_updated_on>
+        <target name="x_463716_cah_cah_game" target_table="sys_db_object">350a231907830110d44bf16c7c1ed031</target>
+        <target_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</target_scope>
+        <target_table>sys_db_object</target_table>
+        <target_type>1</target_type>
+    </sys_restricted_caller_access>
+</record_update>

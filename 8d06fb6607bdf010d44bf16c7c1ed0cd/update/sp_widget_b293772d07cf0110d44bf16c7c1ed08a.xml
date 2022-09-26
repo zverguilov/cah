@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>standard</category>
+        <client_script><![CDATA[api.controller=function($scope) {
+  /* widget controller */
+  var c = this;
+	setInterval(function() {
+		alert($scope.data)
+	}, 2500)
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance_carousel</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>interval</field_list>
+        <has_preview>false</has_preview>
+        <id>cah_carousel</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>CAH_Carousel</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[data.slides = $sp.getRelatedList('sp_carousel_slide','carousel');]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>zdravko.verguilov</sys_created_by>
+        <sys_created_on>2022-04-24 08:26:39</sys_created_on>
+        <sys_id>b293772d07cf0110d44bf16c7c1ed08a</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>CAH_Carousel</sys_name>
+        <sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope>
+        <sys_update_name>sp_widget_b293772d07cf0110d44bf16c7c1ed08a</sys_update_name>
+        <sys_updated_by>zdravko.verguilov</sys_updated_by>
+        <sys_updated_on>2022-05-20 09:20:35</sys_updated_on>
+        <template><![CDATA[<div class="pull-in">
+  <uib-carousel interval="options.interval">
+    <uib-slide ng-repeat="slide in ::data.slides" active="slide.active">
+      <div class="container">
+        <a href="{{::slide.url}}" title="${Open carousel item}: {{::slide.name}}">
+          <img ng-src="{{::slide.background}}" style="margin:auto; width:100%;" role="presentation">
+        </a>
+      </div>
+    </uib-slide>
+  </uib-carousel>
+</div>]]></template>
+    </sp_widget>
+</record_update>

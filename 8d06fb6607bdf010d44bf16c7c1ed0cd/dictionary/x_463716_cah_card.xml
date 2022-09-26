@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Card" max_length="40" name="x_463716_cah_card" sizeclass="5696" type="collection">
+        <element choice="3" default="white" label="Color" max_length="40" name="color" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Black" sequence="1" value="black"/>
+                <element inactive_on_update="false" label="White" sequence="2" value="white"/>
+            </choice>
+        </element>
+        <element label="Content" max_length="1024" name="content" type="string_full_utf8"/>
+        <element label="Moves" max_length="40" name="moves" type="integer"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+    </element>
+</database>

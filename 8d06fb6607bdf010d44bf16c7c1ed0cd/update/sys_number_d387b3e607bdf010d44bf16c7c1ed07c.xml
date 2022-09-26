@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_463716_cah_card">x_463716_cah_card</category>
+        <maximum_digits>6</maximum_digits>
+        <number>1000</number>
+        <prefix>CARD</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>zdravko.verguilov</sys_created_by>
+        <sys_created_on>2021-08-09 11:48:39</sys_created_on>
+        <sys_id>d387b3e607bdf010d44bf16c7c1ed07c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CARD</sys_name>
+        <sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope>
+        <sys_update_name>sys_number_d387b3e607bdf010d44bf16c7c1ed07c</sys_update_name>
+        <sys_updated_by>zdravko.verguilov</sys_updated_by>
+        <sys_updated_on>2021-08-09 11:48:39</sys_updated_on>
+    </sys_number>
+</record_update>

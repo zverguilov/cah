@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="p4_voted" label="P4 Voted" language="en" table="x_463716_cah_cah_game">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>p4_voted</element>
+            <help/>
+            <hint/>
+            <label>P4 Voted</label>
+            <language>en</language>
+            <name>x_463716_cah_cah_game</name>
+            <plural>P4 Voted</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-05-31 12:08:46</sys_created_on>
+            <sys_id>994947ad077b8510d44bf16c7c1ed056</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>P4 Voted</sys_name>
+            <sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope>
+            <sys_update_name>sys_documentation_x_463716_cah_cah_game_p4_voted_en</sys_update_name>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-05-31 12:08:46</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

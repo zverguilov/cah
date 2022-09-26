@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope, $rootScope) {
+  /* widget controller */
+  var c = this;
+	
+	switch($scope.data.player) {
+		case 'player_one':
+			$scope.player = 'Card Czar';
+			$scope.color = 'green';
+			break;
+
+		case 'player_two':
+			$scope.player = 'Blue Player';
+			$scope.color = 'blue';
+			break;
+
+		case 'player_three':
+			$scope.player = 'Red Player';
+			$scope.color = 'red';
+			break;
+
+		case 'player_four':
+			$scope.player = 'Yellow Player';
+			$scope.color = 'yellow';
+			break;
+	}
+	
+	$scope.playCard = function(id) {
+		$rootScope[$scope.color] = id;
+	}
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@700&amp;display=swap');
+
+#main {
+  font-family: Arimo;
+  text-align: left;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 28rem;
+  width: 20rem;
+  padding: 2rem 3rem;
+  font-size: 1.6rem;
+  margin: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+}
+
+.black {
+  background-color: black;
+  color: white;
+}
+
+.white {
+  background-color: white;
+  color: black;
+  border: 1px solid lightgrey;
+
+  /* height: 21rem;
+  width: 15rem;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;*/
+}
+
+.played {
+	max-height: 24.5rem;
+  min-width: 17.5rem;
+  max-width: 17.5rem;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>cah_card</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>CAH_Card</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	data.color = options.color;
+	data.value = options.value.replace(/\_/g, '__________');
+	data.id = options.id;
+	data.player = options.player;
+	data.mode = options.playedMode ? 'playedCard' : '';
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>zdravko.verguilov</sys_created_by>
+        <sys_created_on>2022-04-23 13:55:03</sys_created_on>
+        <sys_id>b2153b1107c30110d44bf16c7c1ed087</sys_id>
+        <sys_mod_count>61</sys_mod_count>
+        <sys_name>CAH_Card</sys_name>
+        <sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope>
+        <sys_update_name>sp_widget_b2153b1107c30110d44bf16c7c1ed087</sys_update_name>
+        <sys_updated_by>zdravko.verguilov</sys_updated_by>
+        <sys_updated_on>2022-04-28 07:12:12</sys_updated_on>
+        <template><![CDATA[<div id="main"
+     ng-class="{
+               black: data.color == 'black',
+               white: data.color == 'white',
+               played: data.mode == 'playedCard'
+               }"
+     ng-click="playCard(data.id)">
+{{data.value}}
+</div>]]></template>
+    </sp_widget>
+</record_update>

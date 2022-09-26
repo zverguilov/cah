@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="CAH Game" max_length="40" name="x_463716_cah_cah_game" sizeclass="13" type="collection">
+        <element label="Cards played" max_length="4000" name="cards_played" reference="x_463716_cah_card" type="glide_list"/>
+        <element label="Current Round" max_length="4000" name="current_round" type="string"/>
+        <element label="New round" max_length="40" name="new_round" type="boolean"/>
+        <element label="P1 Cards" max_length="4000" name="p1_cards" reference="x_463716_cah_card" type="glide_list"/>
+        <element label="P1 Current" max_length="1024" name="p1_current" type="string"/>
+        <element default="0" label="P1 Points" max_length="40" name="p1_points" type="integer"/>
+        <element label="P1 Voted" max_length="40" name="p1_voted" type="boolean"/>
+        <element label="P2 Cards" max_length="4000" name="p2_cards" reference="x_463716_cah_card" type="glide_list"/>
+        <element label="P2 Current" max_length="1024" name="p2_current" type="string"/>
+        <element default="0" label="P2 Points" max_length="40" name="p2_points" type="integer"/>
+        <element label="P2 Voted" max_length="40" name="p2_voted" type="boolean"/>
+        <element label="P3 Cards" max_length="4000" name="p3_cards" reference="x_463716_cah_card" type="glide_list"/>
+        <element label="P3 Current" max_length="1024" name="p3_current" type="string"/>
+        <element default="0" label="P3 Points" max_length="40" name="p3_points" type="integer"/>
+        <element label="P3 Voted" max_length="40" name="p3_voted" type="boolean"/>
+        <element label="P4 Cards" max_length="4000" name="p4_cards" reference="x_463716_cah_card" type="glide_list"/>
+        <element label="P4 Current" max_length="1024" name="p4_current" type="string"/>
+        <element default="0" label="P4 Points" max_length="40" name="p4_points" type="integer"/>
+        <element label="P4 Voted" max_length="40" name="p4_voted" type="boolean"/>
+        <element label="Player Four" max_length="32" name="player_four" reference="sys_user" type="reference"/>
+        <element label="Player One" max_length="32" name="player_one" reference="sys_user" type="reference"/>
+        <element label="Player Three" max_length="32" name="player_three" reference="sys_user" type="reference"/>
+        <element label="Player Two" max_length="32" name="player_two" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="player_one"/>
+        </index>
+        <index name="index2">
+            <element name="player_four"/>
+        </index>
+        <index name="index3">
+            <element name="player_three"/>
+        </index>
+        <index name="index4">
+            <element name="player_two"/>
+        </index>
+    </element>
+</database>

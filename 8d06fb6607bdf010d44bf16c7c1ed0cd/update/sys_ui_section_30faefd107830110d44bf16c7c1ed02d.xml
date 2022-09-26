@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="30faefd107830110d44bf16c7c1ed02d" sys_domain="global" table="x_463716_cah_cah_game" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cards_played</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-23 13:10:22</sys_created_on>
+            <sys_id>0dfa6f1907830110d44bf16c7c1ed021</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:10:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-23 13:10:22</sys_created_on>
+            <sys_id>05fa6f1907830110d44bf16c7c1ed022</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:10:22</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>player_two</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-23 13:10:22</sys_created_on>
+            <sys_id>85fa6f1907830110d44bf16c7c1ed022</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:10:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>player_one</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-23 13:10:22</sys_created_on>
+            <sys_id>09fa6f1907830110d44bf16c7c1ed022</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:10:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-23 13:10:22</sys_created_on>
+            <sys_id>89fa6f1907830110d44bf16c7c1ed022</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:10:22</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>player_three</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-23 13:10:22</sys_created_on>
+            <sys_id>0dfa6f1907830110d44bf16c7c1ed022</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:10:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>player_four</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-23 13:10:22</sys_created_on>
+            <sys_id>8dfa6f1907830110d44bf16c7c1ed022</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:10:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-23 13:10:22</sys_created_on>
+            <sys_id>01fa6f1907830110d44bf16c7c1ed023</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:10:22</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p1_cards</element>
+            <position>8</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-04-23 13:30:29</sys_created_on>
+            <sys_id>778f2fd907830110d44bf16c7c1ed0e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:30:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p2_cards</element>
+            <position>9</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-04-23 13:30:30</sys_created_on>
+            <sys_id>378feb1d07830110d44bf16c7c1ed009</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:30:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p3_cards</element>
+            <position>10</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-04-23 13:30:30</sys_created_on>
+            <sys_id>049feb1d07830110d44bf16c7c1ed01f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:30:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p4_cards</element>
+            <position>11</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-04-23 13:30:30</sys_created_on>
+            <sys_id>449feb1d07830110d44bf16c7c1ed035</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:30:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>current_round</element>
+            <position>12</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-04-23 13:30:31</sys_created_on>
+            <sys_id>cc9feb1d07830110d44bf16c7c1ed03e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:30:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p1_current</element>
+            <position>13</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-04-28 08:38:36</sys_created_on>
+            <sys_id>b4bc1407074f0110d44bf16c7c1ed0ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-04-28 08:38:36</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p2_current</element>
+            <position>14</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-04-28 12:25:31</sys_created_on>
+            <sys_id>3ca0518f07034110d44bf16c7c1ed067</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-04-28 12:25:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p3_current</element>
+            <position>15</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-04-28 12:25:31</sys_created_on>
+            <sys_id>f0a0518f07034110d44bf16c7c1ed072</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-04-28 12:25:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p4_current</element>
+            <position>16</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-04-28 12:25:32</sys_created_on>
+            <sys_id>05a0518f07034110d44bf16c7c1ed0a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-04-28 12:25:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>new_round</element>
+            <position>17</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-05-20 08:09:46</sys_created_on>
+            <sys_id>0519e98a07630110d44bf16c7c1ed03b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-05-20 08:09:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p1_points</element>
+            <position>18</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-05-31 11:35:55</sys_created_on>
+            <sys_id>0cc107a5077b8510d44bf16c7c1ed0f8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-05-31 11:35:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p2_points</element>
+            <position>19</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-05-31 11:35:55</sys_created_on>
+            <sys_id>08c147a5077b8510d44bf16c7c1ed003</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-05-31 11:35:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p3_points</element>
+            <position>20</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-05-31 11:35:55</sys_created_on>
+            <sys_id>08c147a5077b8510d44bf16c7c1ed00d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-05-31 11:35:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p4_points</element>
+            <position>21</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-05-31 11:35:56</sys_created_on>
+            <sys_id>58c147a5077b8510d44bf16c7c1ed017</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-05-31 11:35:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p1_voted</element>
+            <position>22</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-05-31 12:08:45</sys_created_on>
+            <sys_id>854947ad077b8510d44bf16c7c1ed00c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-05-31 12:08:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p2_voted</element>
+            <position>23</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-05-31 12:08:45</sys_created_on>
+            <sys_id>054947ad077b8510d44bf16c7c1ed023</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-05-31 12:08:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p3_voted</element>
+            <position>24</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-05-31 12:08:45</sys_created_on>
+            <sys_id>094947ad077b8510d44bf16c7c1ed02d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-05-31 12:08:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>p4_voted</element>
+            <position>25</position>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2022-05-31 12:08:46</sys_created_on>
+            <sys_id>5d4947ad077b8510d44bf16c7c1ed037</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_463716_cah_cah_game" sys_domain="global" view="Default view">30faefd107830110d44bf16c7c1ed02d</sys_ui_section>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2022-05-31 12:08:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_463716_cah_cah_game</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-04-23 13:10:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>30faefd107830110d44bf16c7c1ed02d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_463716_cah_cah_game</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope>
+            <sys_update_name>sys_ui_section_30faefd107830110d44bf16c7c1ed02d</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-04-23 13:10:21</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

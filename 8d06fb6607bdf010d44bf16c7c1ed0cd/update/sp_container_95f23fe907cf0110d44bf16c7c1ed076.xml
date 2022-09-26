@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>CAH - Container 2</name>
+        <order>2</order>
+        <sp_page display_value="cah">311deb9907830110d44bf16c7c1ed04c</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>zdravko.verguilov</sys_created_by>
+        <sys_created_on>2022-04-24 08:23:49</sys_created_on>
+        <sys_id>95f23fe907cf0110d44bf16c7c1ed076</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CAH - Container 2</sys_name>
+        <sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope>
+        <sys_update_name>sp_container_95f23fe907cf0110d44bf16c7c1ed076</sys_update_name>
+        <sys_updated_by>zdravko.verguilov</sys_updated_by>
+        <sys_updated_on>2022-04-24 08:23:49</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+</record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_463716_cah.CAH_Main</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>CAH_Main</name>
+        <script><![CDATA[var CAH_Main = Class.create();
+CAH_Main.prototype = {
+	initialize: function() {
+	},
+
+	getRandomCard: function(color, id) {
+		var cards = new GlideAggregate('x_463716_cah_card');
+		if(id) {
+			var game = new GlideRecord('x_463716_cah_cah_game');
+			game.get(id);
+
+			if(game.getValue('cards_played')) {
+				cards.addQuery('sys_id', 'NOT IN', game.getValue('cards_played').toString());
+			}
+		}
+		cards.addEncodedQuery('color=' + color);
+		cards.groupBy('sys_id');
+		cards.query();
+
+		var idArray = [];
+
+		while(cards.next()) {
+			idArray.push(cards.getValue('sys_id'));
+		}
+
+		var selected = new GlideRecord('x_463716_cah_card');
+		selected.get(idArray[Math.floor(Math.random() * idArray.length)]);
+
+		return selected;		
+	},
+
+	getCard: function(id) {
+		var card = new GlideRecord('x_463716_cah_card');
+		card.get(id);
+
+		return card;
+	},
+
+	type: 'CAH_Main'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-23 11:55:47</sys_created_on>
+        <sys_id>a6675b1907430110d44bf16c7c1ed046</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>CAH_Main</sys_name>
+        <sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope>
+        <sys_update_name>sys_script_include_a6675b1907430110d44bf16c7c1ed046</sys_update_name>
+        <sys_updated_by>zdravko.verguilov</sys_updated_by>
+        <sys_updated_on>2022-04-24 21:45:42</sys_updated_on>
+    </sys_script_include>
+</record_update>

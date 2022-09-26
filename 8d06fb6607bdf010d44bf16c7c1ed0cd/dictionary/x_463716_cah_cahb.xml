@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="CAHB" max_length="40" name="x_463716_cah_cahb" sizeclass="0" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=content" label="content" max_length="908" name="u_content" type="string"/>
+    </element>
+</database>

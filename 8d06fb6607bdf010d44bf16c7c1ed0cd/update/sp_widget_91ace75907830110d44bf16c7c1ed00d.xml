@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope, $rootScope, spUtil) {
+	/* widget controller */
+	var c = this;
+
+	switch($scope.data.player) {
+		case 'player_one':
+			$scope.player = 'Card Czar';
+			$scope.color = 'green';
+			$scope.voted = 'p1_voted'
+			break;
+
+		case 'player_two':
+			$scope.player = 'Blue Player';
+			$scope.color = 'blue';
+			$scope.voted = 'p2_voted'
+			break;
+
+		case 'player_three':
+			$scope.player = 'Red Player';
+			$scope.color = 'red';
+			$scope.voted = 'p3_voted'
+			break;
+
+		case 'player_four':
+			$scope.player = 'Yellow Player';
+			$scope.color = 'yellow';
+			$scope.voted = 'p4_voted'
+			break;
+	}
+
+	$scope.endTurn = setMoves($scope.color);
+
+	$scope.loading = false;
+	$scope.voteLoading = false;
+
+	$scope[$scope.color] = 0
+
+	$scope.currentRound = JSON.parse($scope.data.currentRound);
+
+	$scope.playCard = function(id) {
+		$scope[$scope.color]++;
+		$scope.loading = true;
+
+		c.data.action = 'play_card';
+		c.data.player = $scope.color;
+		c.data.cardID = id;
+		c.data.moveNum = $scope[$scope.color];
+
+		c.server.update().then(function(res) {
+			$scope.loading = false;
+			$scope.endTurn = setMoves($scope.color);
+		})
+	}
+
+	$scope.newRound = function () {
+		c.data.action = 'new_round';
+		c.server.update().then(function(res) {
+			$scope.currentRound = JSON.parse(res.currentRound);
+			$scope[$scope.color] = 0;
+			$scope.endTurn = false;
+		})
+	}
+
+	$scope.vote = function(player, voted) {
+		$scope.voteLoading = true;
+
+		c.data.action = 'vote';
+		c.data.player = player;
+		c.data.voted = voted;
+
+		if($scope.data[voted] == 0) {
+			c.server.update().then(function() {
+				$scope.voteLoading = false;
+			});
+		}
+	}
+
+	function setMoves(color) {
+		if($scope.data[color].two) return true;
+		if($scope.data[color].one && $scope.data.moves == 1) return true;
+		return false;
+	}
+
+	setInterval(function() {
+		c.data.action = 'ping';
+		c.server.update().then(function(res) {
+			$scope.endTurn = setMoves($scope.color);
+		});
+	}, 1000);
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@700&amp;display=swap');
+
+div {
+  font-family: Arimo;
+}
+
+p {
+  position: absolute;
+  color: white;
+  font-size: 2.3rem;
+  margin: auto;
+}
+
+//card
+#main {
+  font-family: Arimo;
+  text-align: left;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 28rem;
+  width: 20rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+}
+
+.fa-circle {
+  font-size: 4rem;
+  flex-basis: 50%;
+  padding: 0.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black {
+  background-color: black;
+  color: white;
+  pointer-events: none;
+}
+
+.white {
+  background-color: white;
+  color: black;
+  border: 1px solid lightgrey;
+}
+
+.played {
+  max-height: 24.5rem;
+  max-width: 17.5rem;
+  padding: 2rem 3rem;
+  font-size: 1.6rem;
+  margin: 1rem;
+}
+
+.deck {
+  max-height: 17.5rem;
+  max-width: 12.5rem;
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+  margin: -1rem;
+  transition: .3s;
+}
+
+.deck:hover {
+  max-height: 24.5rem;
+  max-width: 17.5rem;
+  margin-top: -10rem;
+  font-size: 1.6rem;
+  padding: 2rem 2.5rem;
+}
+//
+
+.playerZone {
+  display: inline-flex;
+  width: 30%;
+  min-height: 30rem;
+  margin: 1rem;
+  border-radius: 3px;
+  background-color: rgba(255,255,255,.85);
+}
+
+.playerMove {
+  height: 24.5rem;
+  min-width: 17.5rem;
+  max-width: 17.5rem;
+  border-radius: 12px;
+  //border: 1px solid black;
+  position: relative;
+  //background-color: white;
+}
+
+.one {
+  //left: -2rem;
+  top: -3rem;
+}
+
+.two {
+  left: -3rem;
+  top: 6rem;
+}
+
+.green {
+  color: rgb(11, 165, 13);
+}
+
+.blue {
+  color: rgb(23, 25, 134);
+}
+
+.red {
+  color: rgb(254, 0, 0);
+}
+
+.yellow {
+  color: rgb(255, 178, 1);
+}
+
+#blackCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#player {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-shadow: 1.5px 1.5px 3px grey;
+}
+
+#carousel {
+  width: 50%;
+}
+
+#overlay {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  justify-content: center;
+  margin: 3rem 0 0 0;
+  z-index: 1000;
+}
+
+#playField {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+#yellow {
+  box-shadow: rgba(255, 178, 1, 0.35) 0px 10px 15px;
+}
+
+#red {
+  box-shadow: rgba(254, 0, 0, 0.35) 0px 10px 15px;
+}
+
+#blue {
+  box-shadow: rgba(23, 25, 134, 0.35) 0px 10px 15px;
+}
+
+#green {
+  box-shadow: rgba(11, 165, 13, 0.35) 0px 10px 15px;
+}
+
+#card0 {
+  margin-top: 8.4rem;
+  transform: rotate(-28deg);
+}
+
+#card1 {
+  margin-top: 2.8rem;
+  transform: rotate(-21deg);
+}
+
+#card2 {
+  margin-top: -1.4rem;
+  transform: rotate(-14deg);
+}
+
+#card3 {
+  margin-top: -3.5rem;
+  transform: rotate(-7deg);
+}
+
+#card4 {
+  margin-top: -4.9rem;
+  transform: rotate(-3.5deg);
+}
+
+#card5 {
+  margin-top: -4.9rem;
+  transform: rotate(3.5deg);
+}
+
+#card6 {
+  margin-top: -3.5rem;
+  transform: rotate(7deg);
+}
+
+#card7 {
+  margin-top: -1.4rem;
+  transform: rotate(14deg);
+}
+
+#card8 {
+  margin-top: 2.8rem;
+  transform: rotate(21deg);
+}
+
+#card9 {
+  margin-top: 8.4rem;
+  transform: rotate(28deg);
+}
+
+#voteContainer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 85%;
+  margin: auto;
+  position: relative;
+}
+
+.fa-refresh {
+  font-size: 5rem;
+}
+
+.header-loader {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  z-index: 1001;
+}
+
+.loader {
+  opacity: .7;
+  height: 25rem;
+  margin: -6px;
+  box-shadow: 0px 0px 85px 125px black;
+  border-radius: 15rem;
+  background-color: black;
+}
+
+#vote-loader {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+}
+
+.vload {
+	height: 60%;
+  width: 100%;
+  opacity: .6;
+  box-shadow: 0px 0px 25px 35px white;
+  background-color: white;
+  border-radius: 5rem;
+  margin: 2rem 0;
+}
+
+.locked, .grey, p {
+  pointer-events: none;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>cah</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>CAH</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */	
+	data.currentRound = '';
+	data.moves = 0;
+	data.user = gs.getUserID();
+	data.gameID = $sp.getParameter('game_id');
+	data.mode = $sp.getParameter('mode');
+
+	data.playerMap = {
+		player_one: 'p1_cards',
+		player_two: 'p2_cards',
+		player_three: 'p3_cards',
+		player_four: 'p4_cards'
+	}
+
+	data.currentFieldsMap = {
+		p1_current: 'green',
+		p2_current: 'blue',
+		p3_current: 'red',
+		p4_current: 'yellow'
+	}
+
+	data.voteMap = {
+		p1_voted: 'green',
+		p2_voted: 'blue',
+		p3_voted: 'red',
+		p4_voted: 'yellow'
+	}
+
+	data.pointsMap = {
+		player_one: 'p1_points',
+		player_two: 'p2_points',
+		player_three: 'p3_points',
+		player_four: 'p4_points'
+	}
+
+	data.player = '';
+	data.green = {};
+	data.blue = {};
+	data.red = {};
+	data.yellow = {};
+
+	var game = new GlideRecord('x_463716_cah_cah_game');
+	game.get(data.gameID);
+	currentPlay();
+	
+	if(!input) {
+		join(game);
+	}
+
+	if(!game.getValue('current_round')) {
+		newRound(game);
+	} else {
+		data.currentRound = game.getValue('current_round');
+		data.moves = JSON.parse(data.currentRound).moves == 2 ? 2 : 1;
+	}
+
+	Object.keys(data.pointsMap).forEach(function(e) {
+		data[data.pointsMap[e]] = game.getValue(data.pointsMap[e]);
+	})
+
+	Object.keys(data.playerMap).forEach(function(e) {
+		if(game.getValue(e) == data.user) {
+			data.player = e;
+		}
+
+		data[data.playerMap[e]] = game.getValue(data.playerMap[e]) ? game.getValue(data.playerMap[e])
+			.split(',')
+			.map(function(e) {
+			var card = new CAH_Main().getCard(e);
+			return {
+				widget: $sp.getWidget('cah_card', {
+					color: 'white',
+					value: card.getValue('content'),
+					id: card.getValue('sys_id'),
+					player: data.player
+				}),
+				id: card.getValue('sys_id'),
+				value: card.getValue('content'),
+				color: 'white'
+			}
+		}) : [];
+
+		if(game.getValue('new_round') == true) {
+			while(data[data.playerMap[e]].length < 10) {
+				draw(data[data.playerMap[e]])
+			}
+		}
+
+		var IDs = data[data.playerMap[e]].map(function(e) {
+			return e.id
+		})
+
+		if(game.getValue(data.playerMap[e]) != IDs.join(',')) {
+			game.setValue(data.playerMap[e], IDs.join(','));
+			game.update();
+		}
+	});
+
+	Object.keys(data.voteMap).forEach(function(e) {
+		data[e] = game.getValue(e);
+	})
+
+	if(input) {
+		if(input.action == 'new_round') {
+			newRound(game);
+		}
+
+		if(input.action == 'play_card') {
+			playerMove(game, input.player, input.cardID, input.moveNum);
+		}
+
+		if(input.action == 'vote') {
+			vote(input.player, input.voted);
+		}
+	}
+
+	data.blackCardWidget = $sp.getWidget('cah_card', {
+		color: 'black',
+		value: JSON.parse(data.currentRound).black
+	});
+
+	function draw(array) {
+		var card = new CAH_Main().getRandomCard('white', game.getValue('sys_id'));		
+		array.push({
+			color: 'white',
+			value: card.getValue('content'),
+			id: card.getValue('sys_id'),
+			player: data.player
+		});		
+	}
+
+	function newRound(game) {
+		var blackCard = new CAH_Main().getRandomCard('black');
+
+		data.currentRound = JSON.stringify({
+			black: blackCard.getValue('content'),
+			moves: blackCard.getValue('moves')
+		})
+
+		data.moves = blackCard.getValue('moves') == 2 ? 2 : 1;
+
+		clearPlayFields();
+
+		game.setValue('current_round',  data.currentRound);
+		game.setValue('new_round', true);
+		game.update();
+	}
+
+	function playerMove(game, color, id, move) {
+		var currentRound = JSON.parse(data.currentRound);		
+		var card = new CAH_Main().getCard(id);
+
+		var field = '';
+		var cards = '';
+
+		switch(color) {
+			case 'green':
+				field = 'p1_current';
+				cards = 'p1_cards';
+				break;
+
+			case 'blue':
+				field = 'p2_current';
+				cards = 'p2_cards';
+				break;
+
+			case 'red':
+				field = 'p3_current';
+				cards = 'p3_cards';
+				break;
+
+			case 'yellow':
+				field = 'p4_current';
+				cards = 'p4_cards';
+				break;
+		}
+
+		var moveNum = move == 2 ? 'two' : 'one';
+
+		var value = JSON.parse(game.getValue(field)) || {};
+
+		if(value.one) {
+			value.two = {
+				color: 'white',
+				value: card.getValue('content'),
+				id: id,
+				player: data.player,
+				playedMode: true
+			}
+		} else {
+			value.one = {
+				color: 'white',
+				value: card.getValue('content'),
+				id: id,
+				player: data.player,
+				playedMode: true
+			};
+		}
+
+		var cardsValue = game.getValue(cards).split(',').filter(function(e) {
+			return e != id;
+		}).join(',');
+
+		game.setValue(field, JSON.stringify(value));
+		game.setValue(cards, cardsValue);
+		game.setValue('new_round', false);
+		game.update();
+
+		if(data[color]) {
+			data[color][moveNum] = {
+				color: 'white',
+				value: card.getValue('content'),
+				id: id,
+				player: data.player,
+				playedMode: true
+			}
+		}		
+	}
+
+	function clearPlayFields() {
+		Object.keys(data.currentFieldsMap).forEach(function(e) {
+			game.setValue(e, '');
+		})
+	}
+
+	function currentPlay() {
+		Object.keys(data.currentFieldsMap).forEach(function(e) {
+			data[e] = game.getValue(e) ? JSON.parse(game.getValue(e)) : '';
+			data[data.currentFieldsMap[e]] = {
+				one: data[e] && data[e].one ? data[e].one : '',
+				two: data[e] && data[e].two ? data[e].two : ''
+			}
+		})
+	}
+
+	function hotSeat(gameRec) {
+		if(data.mode == 'create') return 'player_one';
+		
+		var fields = ['player_one', 'player_two', 'player_three', 'player_four'];
+		
+		for (var e in fields) {
+			if(!gameRec.getValue(fields[e])) return fields[e];
+			if(gameRec.getValue(fields[e]) && gameRec.getValue(fields[e]) == data.user) return;
+		}
+		
+		return;
+	}
+
+	function join(game) {
+				
+		switch(hotSeat(game)) {
+			case 'player_one':
+				game.setValue('player_one', data.user);
+				console.log('one')
+				break;
+
+			case 'player_two':
+				game.setValue('player_two', data.user);
+				console.log('two')
+				break;
+
+			case 'player_three':
+				game.setValue('player_three', data.user);
+				console.log('three')
+				break;
+
+			case 'player_four':
+				game.setValue('player_four', data.user);
+				console.log('four')
+				break;
+				
+			default:
+				return;
+		}
+		
+		game.update();
+	}
+
+	function vote(player_points, voted) {
+		game.setValue(player_points, +game.getValue(player_points)+1);
+		game.setValue(voted, true);
+
+		game.update();
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>zdravko.verguilov</sys_created_by>
+        <sys_created_on>2022-04-23 13:17:45</sys_created_on>
+        <sys_id>91ace75907830110d44bf16c7c1ed00d</sys_id>
+        <sys_mod_count>465</sys_mod_count>
+        <sys_name>CAH</sys_name>
+        <sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope>
+        <sys_update_name>sp_widget_91ace75907830110d44bf16c7c1ed00d</sys_update_name>
+        <sys_updated_by>zdravko.verguilov</sys_updated_by>
+        <sys_updated_on>2022-06-03 10:07:59</sys_updated_on>
+        <template><![CDATA[<div class="header-loader"
+     ng-if="loading">
+  <img src="cards_loading.gif"
+       class="loader"/>
+</div>
+<div>
+  <div id="blackCard">
+    <div id="player"
+         ng-class="color">
+      <i class="fa fa-refresh" aria-hidden="true"
+         role="button"
+         ng-if="color=='green'"
+         ng-click="newRound()"></i>
+      <h3>
+        {{player}}
+      </h3>
+      <div style="display: flex;
+                  width: 70%;
+                  flex-flow: column nowrap;
+                  align-content: center;
+                  text-align: center;
+                  background-color: rgba(255,255,255,.85);
+                  border-radius: 3px;
+                  box-shadow: rgb(0 0 0 / 35%) 0px 5px 5px;
+                  padding: 0 0 1rem 0;">
+        <h3>
+          Vote:
+        </h3>
+        <div id="voteContainer">
+          <div id="vote-loader">
+            <img src="vote_loading_3.gif"
+                 class="locked vload"
+                 ng-if="voteLoading"/>
+          </div>
+          <i class="fa fa-circle green"
+             aria-hidden="true"
+             ng-click="vote('p1_points', voted)"
+             ng-class="{
+                       locked: data[voted] == 1 || !endTurn
+                       }">
+            <p>
+              {{data.p1_points}}
+            </p>
+          </i>
+          <i class="fa fa-circle blue"
+             aria-hidden="true"
+             ng-click="vote('p2_points', voted)"
+             ng-class="{
+                       locked: data[voted] == 1 || !endTurn
+                       }">
+            <p>
+              {{data.p2_points}}
+            </p>
+          </i>
+          <i class="fa fa-circle red"
+             aria-hidden="true"
+             ng-click="vote('p3_points', voted)"
+             ng-class="{
+                       locked: data[voted] == 1 || !endTurn
+                       }">
+            <p>
+              {{data.p3_points}}
+            </p>
+          </i>
+          <i class="fa fa-circle yellow"
+             aria-hidden="true"
+             ng-click="vote('p4_points', voted)"
+             ng-class="{
+                       locked: data[voted] == 1 || !endTurn
+                       }">
+            <p>
+              {{data.p4_points}}
+            </p>
+          </i>
+        </div>
+      </div>
+    </div>
+    <sp-widget widget="data.blackCardWidget" />
+    <div id="{{color}}" class="playerZone">
+      <div class="playerMove one" ng-if="data[color].one">
+        <div id="main"
+             ng-class="{
+                       black: data[color].one.color == 'black',
+                       white: data[color].one.color == 'white',
+                       played: data[color].one.playedMode
+                       }">
+          {{data[color].one.value}}
+        </div>
+      </div>
+      <div class="playerMove two" ng-if="data[color].two">
+        <div id="main"
+             ng-class="{
+                       black: data[color].two.color == 'black',
+                       white: data[color].two.color == 'white',
+                       played: data[color].two.playedMode
+                       }">
+          {{data[color].two.value}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div id="overlay"
+         ng-if="!endTurn && !loading">
+      <div ng-repeat="card in data[data.playerMap[data.player]] track by $index"
+           id="card{{$index}}">
+        <div>
+          <div id="main"
+               class="deck"
+               ng-class="{
+                         black: card.color == 'black',
+                         white: card.color == 'white'
+                         }"
+               ng-click="playCard(card.id)">
+            {{card.value}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="playField">
+      <div id="green" class="playerZone" ng-if="color != 'green'">
+        <div class="playerMove one" ng-if="data.green.one">
+          <div id="main"
+               ng-class="{
+                         black: data.green.one.color == 'black',
+                         white: data.green.one.color == 'white',
+                         played: data.green.one.playedMode
+                         }">
+            {{data.green.one.value}}
+          </div> 
+        </div>
+        <div class="playerMove two" ng-if="data.green.two">
+          <div id="main"
+               ng-class="{
+                         black: data.green.two.color == 'black',
+                         white: data.green.two.color == 'white',
+                         played: data.green.two.playedMode
+                         }">
+            {{data.green.two.value}}
+          </div>  
+        </div>
+      </div>
+      <div id="blue" class="playerZone" ng-if="color != 'blue'">
+        <div class="playerMove one" ng-if="data.blue.one">
+          <div id="main"
+               ng-class="{
+                         black: data.blue.one.color == 'black',
+                         white: data.blue.one.color == 'white',
+                         played: data.blue.one.playedMode
+                         }">
+            {{data.blue.one.value}}
+          </div> 
+        </div>
+        <div class="playerMove two" ng-if="data.blue.two">
+          <div id="main"
+               ng-class="{
+                         black: data.blue.two.color == 'black',
+                         white: data.blue.two.color == 'white',
+                         played: data.blue.two.playedMode
+                         }">
+            {{data.blue.two.value}}
+          </div>  
+        </div>
+      </div>
+      <div id="red" class="playerZone" ng-if="color != 'red'">
+        <div class="playerMove one" ng-if="data.red.one">
+          <div id="main"
+               ng-class="{
+                         black: data.red.one.color == 'black',
+                         white: data.red.one.color == 'white',
+                         played: data.red.one.playedMode
+                         }">
+            {{data.red.one.value}}
+          </div> 
+        </div>
+        <div class="playerMove two" ng-if="data.red.two">
+          <div id="main"
+               ng-class="{
+                         black: data.red.two.color == 'black',
+                         white: data.red.two.color == 'white',
+                         played: data.red.two.playedMode
+                         }">
+            {{data.red.two.value}}
+          </div>  
+        </div>
+      </div>
+      <div id="yellow" class="playerZone" ng-if="color != 'yellow'">
+        <div class="playerMove one" ng-if="data.yellow.one">
+          <div id="main"
+               ng-class="{
+                         black: data.yellow.one.color == 'black',
+                         white: data.yellow.one.color == 'white',
+                         played: data.yellow.one.playedMode
+                         }">
+            {{data.yellow.one.value}}
+          </div> 
+        </div>
+        <div class="playerMove two" ng-if="data.yellow.two">
+          <div id="main"
+               ng-class="{
+                         black: data.yellow.two.color == 'black',
+                         white: data.yellow.two.color == 'white',
+                         played: data.yellow.two.playedMode
+                         }">
+            {{data.yellow.two.value}}
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

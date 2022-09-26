@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_carousel">
+    <sp_instance_carousel action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <interval>5000</interval>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">13f273a107cf0110d44bf16c7c1ed065</sp_column>
+        <sp_widget display_value="Carousel">cf1a5153cb21020000f8d856634c9c3c</sp_widget>
+        <sys_class_name>sp_instance_carousel</sys_class_name>
+        <sys_created_by>zdravko.verguilov</sys_created_by>
+        <sys_created_on>2022-04-24 08:24:05</sys_created_on>
+        <sys_id>8d03f36107cf0110d44bf16c7c1ed00b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope>
+        <sys_update_name>sp_instance_carousel_8d03f36107cf0110d44bf16c7c1ed00b</sys_update_name>
+        <sys_updated_by>zdravko.verguilov</sys_updated_by>
+        <sys_updated_on>2022-04-24 08:24:05</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_carousel>
+    <sys_translated_text action="DELETE" query="documentkey=8d03f36107cf0110d44bf16c7c1ed00b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</application>
+        <file_path/>
+        <instance_id>1d64aec2db06f3082f68c597059619f0</instance_id>
+        <instance_name>dev87737</instance_name>
+        <name>sp_instance_carousel_8d03f36107cf0110d44bf16c7c1ed00b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_carousel"><sp_instance_carousel action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><interval>5000</interval><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="2">13f273a107cf0110d44bf16c7c1ed065</sp_column><sp_widget display_value="Carousel">cf1a5153cb21020000f8d856634c9c3c</sp_widget><sys_class_name>sp_instance_carousel</sys_class_name><sys_created_by>zdravko.verguilov</sys_created_by><sys_created_on>2022-04-24 08:24:05</sys_created_on><sys_id>8d03f36107cf0110d44bf16c7c1ed00b</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package><sys_policy/><sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope><sys_update_name>sp_instance_carousel_8d03f36107cf0110d44bf16c7c1ed00b</sys_update_name><sys_updated_by>zdravko.verguilov</sys_updated_by><sys_updated_on>2022-04-24 08:24:05</sys_updated_on><title/><url/><widget_parameters/></sp_instance_carousel><sys_translated_text action="delete_multiple" query="documentkey=8d03f36107cf0110d44bf16c7c1ed00b"/></record_update>]]></payload>
+        <payload_hash>1714052408</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>f4267f6607bdf010d44bf16c7c1ed0c7</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>zdravko.verguilov</sys_created_by>
+        <sys_created_on>2022-04-24 08:24:05</sys_created_on>
+        <sys_id>8d03f36107cf0110d44bf16c7c1ed00e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1805aabb9110000001</sys_recorded_at>
+        <sys_updated_by>zdravko.verguilov</sys_updated_by>
+        <sys_updated_on>2022-04-24 08:24:05</sys_updated_on>
+        <type>Instance of Carousel</type>
+        <update_guid>8503f3610bcf0110625f8621fda1f80e</update_guid>
+        <update_guid_history>8503f3610bcf0110625f8621fda1f80e:1714052408</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">9a63b32d07cf0110d44bf16c7c1ed03d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>zdravko.verguilov</sys_created_by>
+        <sys_created_on>2022-04-24 08:25:48</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_carousel">sp_instance_carousel</sys_db_object>
+        <sys_id>5c1edb2132934acaabfd4c94e53ab4e4</sys_id>
+        <sys_metadata>8d03f36107cf0110d44bf16c7c1ed00b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope>
+        <sys_scope_delete display_value="">063b1022ce2044fcb2938d6e0e7b03c4</sys_scope_delete>
+        <sys_update_name>sp_instance_carousel_8d03f36107cf0110d44bf16c7c1ed00b</sys_update_name>
+        <sys_update_version display_value="sp_instance_carousel_8d03f36107cf0110d44bf16c7c1ed00b">8d03f36107cf0110d44bf16c7c1ed00e</sys_update_version>
+        <sys_updated_by>zdravko.verguilov</sys_updated_by>
+        <sys_updated_on>2022-04-24 08:25:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

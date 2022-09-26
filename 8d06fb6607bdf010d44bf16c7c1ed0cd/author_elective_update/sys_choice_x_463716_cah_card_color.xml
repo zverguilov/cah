@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="color" table="x_463716_cah_card" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>color</element>
+            <name>x_463716_cah_card</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2021-08-09 11:45:23</sys_created_on>
+            <sys_id>d2e6ff6607bdf010d44bf16c7c1ed038</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>color</sys_name>
+            <sys_package display_value="CAH" source="x_463716_cah">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CAH">8d06fb6607bdf010d44bf16c7c1ed0cd</sys_scope>
+            <sys_update_name>sys_choice_x_463716_cah_card_color</sys_update_name>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2021-08-09 11:45:23</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>color</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Black</label>
+            <language>en</language>
+            <name>x_463716_cah_card</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2021-08-09 11:45:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d60777a607bdf010d44bf16c7c1ed0da</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2021-08-09 11:46:28</sys_updated_on>
+            <value>black</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>color</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>White</label>
+            <language>en</language>
+            <name>x_463716_cah_card</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>zdravko.verguilov</sys_created_by>
+            <sys_created_on>2021-08-09 11:45:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e9d63ba607bdf010d44bf16c7c1ed0a5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>zdravko.verguilov</sys_updated_by>
+            <sys_updated_on>2021-08-09 11:45:41</sys_updated_on>
+            <value>white</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>
